@@ -15,6 +15,10 @@ img{
   margin: 0 auto;
 }
 
+section {
+  margin: 10px;
+  text-align: center;
+}
 
 /******************************************
 /* ADDITIONAL STYLES

@@ -39,7 +39,6 @@ main {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -338,6 +337,14 @@ summary {
 
 template {
   display: none;
+}
+
+.center{
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+  text-align: center;
 }
 
 /**
