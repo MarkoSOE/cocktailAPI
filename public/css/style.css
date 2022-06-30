@@ -1,0 +1,8 @@
+.container{
+  display: flex;
+  height: 10%;
+  background-color: #281C02;
+}
+body{
+  background-color: #281C02;
+}
