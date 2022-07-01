@@ -17,3 +17,13 @@ section{
 section:nth-child(2) {
   flex-grow: 3;
 }
+
+button{
+  outline: none !important;
+  box-shadow: 0 0 10px #719ECE;
+}
+
+form{
+  width: auto;
+  border: 1px solid red;
+}
