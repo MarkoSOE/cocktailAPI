@@ -1,8 +1,19 @@
-.container{
+main{
   display: flex;
-  height: 10%;
-  background-color: #281C02;
 }
-body{
-  background-color: #281C02;
+
+header,footer{
+  text-align: center;
+  height: 100px;
+  border: 1px solid black;
+}
+
+section{
+  height: 300px;
+  border: 1px solid black;
+  flex: 1;
+}
+
+section:nth-child(2) {
+  flex-grow: 3;
 }
