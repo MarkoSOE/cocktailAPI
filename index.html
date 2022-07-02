@@ -8,14 +8,15 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-	<header><a href="github.com/MarkoSOE">Github</a></header>
-	<section>
-		<h1>Golden Goblet Lounge</h1>
-		<form action="/submit" method="post" id="cocktailForm">
-			<input type="text" id="cocktailName" placeholder="Enter a Cocktail">
-			<input type="submit" value="Search">
-			<input type="submit" value="Random">
+	<header class="credit"><span><a href="https://github.com/MarkoSOE">Github</a></span></header>
+	<section class="card homepage neon">
+		<h1 class="neonText pulsate">Golden Goblet Lounge</h1>
+		<form action="/submitDrink" method="post" id="cocktailForm" class="flexContainerRow">
+			<input type="text" id="inputText" class="homepageInput" placeholder="Enter a Cocktail">
+			<input type="submit" class="homepageInput" id="inputSubmitQuery" value="Search">
+			<input type="submit" class="homepageInput" id="inputSubmitRandom" value="Random">
 		</form>
+		<section id="neonReflect" style="opacity: 0.1;"></section>
 	</section>
 	<footer></footer>
 </body>

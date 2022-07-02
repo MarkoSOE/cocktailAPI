@@ -10,6 +10,10 @@ app.get('/', (request, response) =>{
     response.sendFile(__dirname + '/index.html')
 })
 
+app.post('/submitDrink',(request,response) =>{
+    
+})
+
 app.listen(process.env.PORT || PORT, ()=>{
     console.log(`Server runnning on port ${PORT}`)
 })
