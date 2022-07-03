@@ -21,20 +21,37 @@ app.post('/submitDrink',(request,response) =>{
     
     console.log('req.name: ', request.name);
     console.log('req.data: ', request.data);
-    console.log('req.body: ', request.body);
+    console.log('req.body: ', request.body.textinput);
+
+    let drink = request.body.textinput
+
+    function randomIntFromInterval(min,max){
+        return Math.floor(Math.random()*(max-min + 1) +min)
+    }
     
-    // const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`;
-    // //api template
-    // fetch(url)
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         //fill in html elements with the title of the drink, the image of the drink, and the instructions for the drink
-    //         console.log(data)
-    //     })
-    //     //error catch and display error
-    //     .catch(err => {
-    //         console.log(`error ${err}`)
-    //     });
+    const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`;
+    //api template
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            
+            //need to determine a random drink within the drinks array returned from the 
+
+            let i = randomIntFromInterval(0,data.drinks.length)
+            
+            let drinkName = data.drinks[i].strDrink
+            console.log(drinkName)
+            //drink glass
+            let drinkGlass = data.drinks[i].strGlass
+            console.log(drinkGlass)
+            //instructions
+
+            //ingredients
+        })
+        //error catch and display error
+        .catch(err => {
+            console.log(`error ${err}`)
+        });
 })
 
 app.listen(process.env.PORT || PORT, ()=>{
