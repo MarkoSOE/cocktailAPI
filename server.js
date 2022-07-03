@@ -8,8 +8,10 @@ app.use(express.static(__dirname + '/public'))
 app.set('views', __dirname+'/views/')
 app.use(express.json())
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+// in latest body-parser use like below.
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (request, response) =>{
     response.render('/index.html')
@@ -17,8 +19,10 @@ app.get('/', (request, response) =>{
 
 app.post('/submitDrink',(request,response) =>{
     
-    console.log('req.body: ', request.drink);
-    console.log('req.body: ', request.query.drink);
+    console.log('req.name: ', request.name);
+    console.log('req.data: ', request.data);
+    console.log('req.body: ', request.body);
+    
     // const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`;
     // //api template
     // fetch(url)
