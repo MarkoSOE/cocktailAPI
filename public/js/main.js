@@ -3,19 +3,17 @@
 const { features } = require("process");
 
 //set an event listener for the button that when clicked, triggers the function getDrink
-document.getElementById('inputSubmitQuery').addEventListener('submit', getDrink)
+
+let drink = document.getElementById('inputSubmitQuery')
+
+drink.addEventListener('submit', getDrink)
 
 //initialize and define function getDrink
 function getDrink(){
-    console.log('hi')
-    //gather the user input of which drink they would like to see by using queryselector value
-    let drink = document.getElementById('inputText').value;
 
-    fetch('/submitDrink',{
-        method: 'POST',
-        headers: {
-            'Content-Type' : 'text/plain'
-        },
-        body: drink
-    })
+    let drinkData = document.getElementById('inputText').value 
+
+    fetch(`http://example.com/movies.jsonwww.thecocktaildb.com/api/json/v1/1/search.php?s=` + `${drinkData}`)
+  .then(response => response.json())
+  .then(data => console.log(data));
 }
