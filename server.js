@@ -46,6 +46,7 @@ app.post('/submitDrink',(request,response) =>{
             console.log(drinkGlass)
             //instructions
 
+            
             //ingredients
         })
         //error catch and display error
