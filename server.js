@@ -4,13 +4,13 @@ const bodyParser = require('body-parser');
 const app = express()
 const PORT = 2000
 
-app.use(express.static(__dirname + '/public'))
 app.set('views', __dirname+'/views/')
-app.use(express.json())
+app.set('view engine', 'ejs')
 
+app.use(express.json())
+app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
-// in latest body-parser use like below.
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (request, response) =>{
@@ -60,18 +60,20 @@ app.post('/submitDrink',(request,response) =>{
                 return e
             })
 
-            console.log(ingredients)
-            console.log(measures)
-
-            let combinedingredientsinstructions = []
+            let combinedingredientsmeasures = []
             
-            for(let i = 0; i < ingredients.length; i++)
+            for(let i = 0; i < ingredients.length; i++){
+                combinedingredientsmeasures.push(measures[i] + " " + ingredients[i])
+            }
+
+            console.log(combinedingredientsmeasures)
 
             //instructions
-            let instructions = data.drinks[i].strInstructions
+            let instructions = data.drinks[i].strInstructions.split('.')
 
 			console.log(instructions)
 
+            response.render('drinkspage.ejs')
         })
         //error catch and display error
         .catch(err => {
