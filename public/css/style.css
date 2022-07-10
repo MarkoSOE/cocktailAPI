@@ -2,6 +2,10 @@
 /* BASE STYLES
 /*******************************************/
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --accent: hsl(55, 40%, 51%);
   --backgroundCard: rgb(25, 26, 29);
@@ -284,6 +288,31 @@ a:hover {
   left: calc(50vw - 30px);
 }
 
+/* .flexContainerRow section{
+  flex: 1 1 auto;
+  min-height: 300px;
+}
+
+.flexContainerRow .ingredients {
+  order: 1;
+  border-right: 2px solid green;
+  position: relative;
+  top: 10%;
+  bottom: 10%;
+}
+
+.flexContainerRow .instructions{
+  order: 2;
+  border-right: 2px solid green;
+  position: relative;
+  top: 10%;
+  bottom: 0;
+}
+
+.flexContainerRow .glass {
+  order: 3;
+} */
+
 /******************************************
 /* 404
 /*******************************************/
@@ -297,10 +326,6 @@ a:hover {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
-* {
-  box-sizing: border-box;
-}
 
 .clearfix:after {
   content: ".";
