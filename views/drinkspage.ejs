@@ -7,16 +7,48 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
-<body>
+<body class="results">
     <header class="credit"><span><a href="https://github.com/MarkoSOE">Github</a></span></header>
     <ul>
-        <% for (let i = 0); i < info.drinks.length; i++){ %>
+        <% for (let i = 0; i < info.drinks.length; i++){ %>
             <section class="card">
-
+                <header class="cardFront flexContainerRow">
+                    <h1>
+                        <%= info.drinks[i].strDrink.toUpperCase() %>
+                    </h1>
+                </header>
+                <footer class="cardBack flexContainerRow">
+                    <section class="ingredients">
+                        <h2>Ingredients: </h2>
+                        <ul>
+                            <!-- want to loop through the ingredients and the measures, putting them in the dom until we get a null value -->
+                            <% let count = 1 %>
+                            <% while (info.drinks[i]['strMeasure' + count] || info.drinks[i]['strIngredient' + count]) { %>
+                                <li class="measurement">
+                                    <%= info.drinks[i]['strMeasure' + count] %>
+                                </li>
+                                <li class="ingredient">
+                                    <%= info.drinks[i]['strIngredient' + count] %>
+                                </li>
+                                <% count ++ %>
+                           <% } %>
+                        </ul>
+                    </section>
+                    <section class="instructions">
+                        <h2>Instructions: </h2>
+                        <ol>
+                            <!-- Here, we want to take the string of instructions, split it into an array based off of period placement -->
+                            <% let instructions = info.drinks[i].strInstructions.split('. ')  %>
+                            <% for(let i = 0; i < instructions.length; i++)  { %>
+                                <li class="instructions">
+                                    <%= instructions[i] %>
+                                </li>
+                            <% } %>
+                        </ol>
+                    </section>
+                </footer>
             </section>
-        
-        
-        }
+        <% } %>    
     </ul>
 </body>
 </html>

@@ -42,38 +42,48 @@ app.post('/submitDrink',(request,response) =>{
             //drink glass
             let drinkGlass = data.drinks[i].strGlass
             console.log(drinkGlass)
+            
             //ingredients
             //create an array to store the ingredients
             let ingredients = []
-            ingredients.push(data.drinks[i].strIngredient1, data.drinks[i].strIngredient2, data.drinks[i].strIngredient3, data.drinks[i].strIngredient4, data.drinks[i].strIngredient5,data.drinks[i].strIngredient6,data.drinks[i].strIngredient7,data.drinks[i].strIngredient8,data.drinks[i].strIngredient9,data.drinks[i].strIngredient10,data.drinks[i].strIngredient11,data.drinks[i].strIngredient12,data.drinks[i].strIngredient13,data.drinks[i].strIngredient14,data.drinks[i].strIngredient15)
 
+            let ingredientsCounter = 1;
+
+            while(data.drinks[i]['strIngredient' + ingredientsCounter]){
+                ingredients.push(data.drinks[i]['strIngredient' + ingredientsCounter])
+                ingredientsCounter += 1;
+            }
+
+            console.log(ingredients)
+            
             //measure
             //create an array to store the measures
             let measures = []
-            measures.push(data.drinks [i].strMeasure1 , data.drinks [i].strMeasure2, data.drinks [i].strMeasure3, data.drinks [i].strMeasure4, data.drinks [i].strMeasure5, data.drinks [i].strMeasure6, data.drinks [i].strMeasure7, data.drinks [i].strMeasure8, data.drinks [i].strMeasure9, data.drinks [i].strMeasure10, data.drinks [i].strMeasure11, data.drinks [i].strMeasure12, data.drinks [i].strMeasure13, data.drinks [i].strMeasure14, data.drinks [i].strMeasure15)
-
-            ingredients = ingredients.filter(function(e){
-                return e
-            })
-
-			measures = measures.filter(function(e){
-                return e
-            })
-
-            let combinedingredientsmeasures = []
             
-            for(let i = 0; i < ingredients.length; i++){
-                combinedingredientsmeasures.push(measures[i] + " " + ingredients[i])
+            let measuresCounter = 1;
+
+            while(data.drinks[i]['strMeasure' + measuresCounter]){
+                measures.push(data.drinks[i]['strMeasure' + measuresCounter])
+                measuresCounter += 1;
             }
 
-            console.log(combinedingredientsmeasures)
+            console.log(measures)
 
-            //instructions
-            let instructions = data.drinks[i].strInstructions.split('.')
+            // let combinedingredientsmeasures = []
+            
+            // for(let i = 0; i < ingredients.length; i++){
+            //     combinedingredientsmeasures.push(measures[i] + " " + ingredients[i])
+            // }
 
-			console.log(instructions)
+            // console.log(combinedingredientsmeasures)
 
-            response.render('drinkspage.ejs')
+            // //instructions
+            // let instructions = data.drinks[i].strInstructions.split('.')
+
+			// console.log(instructions)
+
+            //send the data from the API to the template to generate html
+            response.render('drinkspage.ejs', {info:data})
         })
         //error catch and display error
         .catch(err => {
