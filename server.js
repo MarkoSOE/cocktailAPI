@@ -40,7 +40,7 @@ app.post('/submitDrink',(request,response) =>{
             let drinkName = data.drinks[i].strDrink
             console.log(drinkName)
             //drink glass
-            let drinkGlass = data.drinks[i].strGlass
+            let drinkGlass = data.drinks[i].strGlass.split(' ').join('').toLowerCase() 
             console.log(drinkGlass)
             
             //ingredients

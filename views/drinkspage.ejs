@@ -40,11 +40,24 @@
                             <!-- Here, we want to take the string of instructions, split it into an array based off of period placement -->
                             <% let instructions = info.drinks[i].strInstructions.split('. ')  %>
                             <% for(let i = 0; i < instructions.length; i++)  { %>
-                                <li class="instructions">
-                                    <%= instructions[i] %>
+                                <li class="instruction flexContainerRow">
+                                    <span class="bullet">
+                                        <%= i + 1 + '.' %> 
+                                    </span>
+                                    <span>
+                                        <%= instructions[i] %>
+                                    </span>
                                 </li>
                             <% } %>
                         </ol>
+                    </section>
+                    <section class="glass">
+                        <h3>Glass: </h3>
+                        <section class="flexContainerColumn">
+                            <!-- here we want to find what kind of glass image we want to use -->
+                            <% let drinkGlass = info.drinks[i].strGlass.split(' ').join('').toLowerCase() %> 
+                            <img src={${drinkGlass}} alt="">
+                        </section>
                     </section>
                 </footer>
             </section>
