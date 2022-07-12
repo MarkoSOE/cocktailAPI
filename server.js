@@ -1,4 +1,4 @@
-const { request } = require('express')
+const { request, response } = require('express')
 const express = require('express')
 const bodyParser = require('body-parser')
 const fetch = require('node-fetch')
@@ -31,6 +31,18 @@ app.post('/submitDrink',(request,response) =>{
         .catch(err => {
             console.log(`error ${err}`)
         });
+})
+
+app.post('/submitRandom', (request,response) => {
+    const randurl = "www.thecocktaildb.com/api/json/v1/1/random.php"
+    fetch(randurl)
+        .then(res => res.json())
+        .then(data => {
+            response.render('drinkspage.ejs', {info:data})
+        })
+        .catch(err =>{
+            console.log(`error ${err}`)
+        })
 })
 
 app.listen(process.env.PORT || PORT, ()=>{
