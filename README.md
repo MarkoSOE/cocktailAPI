@@ -10,6 +10,7 @@ will fetch www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita).
 
 Technologies: Node.js, Express.js, HTML5, CSS3, EJS
 
+The web application is built using the Express framework, allowing us to manage client requests to our server.js. 
 
 # Optimizations
 
