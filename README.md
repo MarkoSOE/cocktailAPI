@@ -7,6 +7,15 @@ This application uses the cocktailDB API (https://www.thecocktaildb.com/api.php)
 will fetch www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita).
 
 # How it's made
+<p align="middle">
+<img src="https://img.shields.io/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=plastic" alt="badge sample"/>
+<img src="https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=black&style=plastic" alt="badge sample"/>
+<img src="https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=black&style=plastic" alt="badge sample"/>
+<img src="https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=black&style=plastic" alt="badge sample"/>
+<img src="https://img.shields.io/badge/-Express-000000?logo=express&logoColor=white&style=plastic" alt="badge sample"/>
+<img src="https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=black&style=plastic" alt="badge sample"/>
+</p>
+
 
 Technologies: Node.js, Express.js, HTML5, CSS3, EJS
 
