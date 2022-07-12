@@ -3,6 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 const app = express()
 const PORT = 2000
+const fetch = require('node-fetch')
 
 app.set('views', __dirname+'/views/')
 app.set('view engine', 'ejs')
