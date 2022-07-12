@@ -288,6 +288,10 @@ a:hover {
   left: calc(50vw - 30px);
 }
 
+.ingredients ul{
+  list-style: none;
+  padding-left: 0;
+}
 /* .flexContainerRow section{
   flex: 1 1 auto;
   min-height: 300px;

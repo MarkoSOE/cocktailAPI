@@ -56,7 +56,7 @@
                         <section class="flexContainerColumn">
                             <!-- here we want to find what kind of glass image we want to use -->
                             <% let drinkGlass = info.drinks[i].strGlass.split(' ').join('').toLowerCase() %> 
-                            <img src={${drinkGlass}} alt="">
+                            <img src=" <%=  `images/${drinkGlass}.png` %>" alt="">
                         </section>
                     </section>
                 </footer>
