@@ -7,10 +7,10 @@
 }
 
 :root {
-  --accent: hsl(55, 40%, 51%);
+  --accent: rgb(221,51,102);
   --backgroundCard: rgb(25, 26, 29);
   --background: rgb(35, 35, 35);
-  --neon: hsl(54, 80%, 71%);
+  --neon: rgb(221,51,102);
   --white: hsla(0, 0%, 100%, 0.75);
   --boxShadowNeon: 0 0 0.4em var(--white), 0 0 1em var(--neon), inset 0 0 0.2em var(--white), inset 0 0 .5em var(--neon);
 }
@@ -34,11 +34,11 @@ body {
     0 0 7px #fff,
     0 0 10px #fff,
     0 0 21px #fff,
-    0 0 42px hsl(54, 80%, 71%),
-    0 0 82px hsl(54, 80%, 71%),
-    0 0 92px hsl(54, 80%, 71%),
-    0 0 102px hsl(54, 80%, 71%),
-    0 0 151px hsl(54, 80%, 71%);
+    0 0 42px rgb(221,51,102),
+    0 0 82px rgb(221,51,102),
+    0 0 92px rgb(221,51,102),
+    0 0 102px rgb(221,51,102),
+    0 0 151px rgb(221,51,102);
 }
 
 /* This creates so much frame lag it's not worth having */
@@ -124,7 +124,9 @@ a:hover {
 
 .card {
   position: relative;
-  background: var(--backgroundCard);
+  /* background: var(--backgroundCard); */
+  background: url(../images/night-city-landscape-purple-neon-retrowave-vaporwave-aesthetic-sunset-skyscrapers-silhouettes-dusk-cityscape-vintage-styled_148087-296.webp);
+  background-size: contain;
   width: 80vw;
   max-width: 1200px;
   margin: 80px auto;

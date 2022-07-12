@@ -33,8 +33,8 @@ app.post('/submitDrink',(request,response) =>{
         });
 })
 
-app.post('/submitRandom', (request,response) => {
-    const randurl = "www.thecocktaildb.com/api/json/v1/1/random.php"
+app.get('/submitRandom', (request,response) => {
+    const randurl = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
     fetch(randurl)
         .then(res => res.json())
         .then(data => {
