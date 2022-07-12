@@ -25,4 +25,4 @@ Currently, the application is not able to handle error requests in a user friend
 
 
 # Lessons Learned
-
+Being my first web app, I've learned a lot about both the front end and backend devlopment. I've learned about css root styles, and css media queries, and further improved my flexbox knowledge. Through this project I've learned about the communication between front end html and server side JavaScript through the use of requests and how to parse through them. I most improved in my knowledge of the templating language EJS. Learning how to dynamically create lists and elements depending on the number of items in an object being passed was the most difficult but rewarding concept to implement into this project.
