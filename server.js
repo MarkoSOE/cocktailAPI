@@ -1,9 +1,9 @@
 const { request } = require('express')
 const express = require('express')
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
+const fetch = require('node-fetch')
 const app = express()
 const PORT = 2000
-const fetch = require('node-fetch');
 
 app.set('views', __dirname+'/views/')
 app.set('view engine', 'ejs')
