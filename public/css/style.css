@@ -133,6 +133,15 @@ a:hover {
   overflow-wrap: break-word;
   border: solid 1px var(--accent);
 }
+.cardTwo {
+  position: relative;
+  background: var(--backgroundCard);
+  width: 80vw;
+  max-width: 1200px;
+  margin: 80px auto;
+  overflow-wrap: break-word;
+  border: solid 1px var(--accent);
+}
 .cardFront, .cardBack {
   margin: 20px;
 }
